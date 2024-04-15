@@ -1,5 +1,6 @@
 // Age Calculator
 import inquirer from 'inquirer';
+import chalk from 'chalk';
 let age = await inquirer.prompt({
     name: 'year',
     type: 'number',
@@ -7,4 +8,4 @@ let age = await inquirer.prompt({
 });
 let birth_year = age.year;
 let answer = (2024 - birth_year);
-console.log(`You're or you'll be ${answer} years old.`);
+console.log(chalk.cyan(`You are ${answer} years old.`));
